@@ -1,0 +1,357 @@
+/* Γενικό στυλ σώματος */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefaf4;
+  color: #333;
+}
+
+/* Πλοήγηση / Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9efe0;
+  padding: 12px 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.header {
+  color: #c19a6b;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'Poppins', cursive;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  font-size: 1rem;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.menu-link:hover,
+.menu-link.active {
+  color: #ffc107;
+}
+
+/* Λογότυπο */
+.logo {
+  background-color: #fdf3dc;
+  border-top: 2px solid #ffeb99;
+  border-bottom: 2px solid #ffeb99;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+#logo-img {
+  width: 110px;
+  height: auto;
+  margin-right: 18px;
+}
+
+.phrase {
+  color: #555;
+  font-size: 1.1em;
+}
+
+#subtitle {
+  text-align: center;
+  color: #f4a261;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+/* Κατηγορίες */
+.categories {
+  background-color: #fffaf1;
+  padding: 35px 0;
+  text-align: center;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 0 10%;
+}
+
+.category1, .category2, .category3 {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.category1:hover,
+.category2:hover,
+.category3:hover {
+  transform: scale(1.04);
+}
+
+.cuisine {
+  width: 100%;
+  max-width: 200px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.category1 p,
+.category2 p,
+.category3 p {
+  color: #555;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* Κάρτες συνταγών */
+.recipe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.recipe-card {
+  width: 240px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 16px;
+  text-align: center;
+}
+
+.recipe-thumb {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-view {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: #ffe082;
+  color: #444;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-view:hover {
+  background-color: #ffd54f;
+}
+
+/* Λεπτομέρειες συνταγής */
+.recipe-full-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  padding: 20px;
+}
+
+.recipe-full-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.recipe-full-container h2 {
+  color: #f4a261;
+}
+
+.description {
+  font-style: italic;
+  color: #666;
+}
+
+/* Κουμπιά */
+.btn-nav, .like-btn, .save-btn, .remove-btn, .btn-edit, .btn-delete {
+  background-color: #cde4f9;
+  border: none;
+  color: #333;
+  padding: 9px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-delete {
+  background-color: #ffcccb;
+}
+
+.btn-nav:hover,
+.btn-delete:hover,
+.btn-edit:hover,
+.like-btn:hover,
+.save-btn:hover,
+.remove-btn:hover {
+  background-color: #90caf9;
+  transform: scale(1.04);
+}
+
+.liked, .saved, .remove-btn.saved {
+  background-color: #90caf9;
+  color: white;
+}
+
+/* Flash μήνυμα */
+.flash-message {
+  background-color: #fff3cd;
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-size: 1em;
+  z-index: 999;
+}
+
+/* Footer */
+footer {
+  background-color: #f4ede4;
+  color: #333;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer div {
+  width: 30%;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+footer .footer-heading {
+  color: #f4a261;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffb74d;
+}
+
+/* Popups */
+.popup-container {
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  text-align: center;
+  max-width: 400px;
+}
+
+.popup-box h3 {
+  color: #f4a261;
+  margin-bottom: 20px;
+}
+
+.popup-button {
+  background-color: #fff176;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-button:hover {
+  background-color: #fdd835;
+}
+
+/* Φόρμες */
+.form-container {
+  background-color: #f9f5eb;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 420px;
+  margin: 30px auto;
+}
+
+.form-container h2 {
+  color: #f4a261;
+  text-align: center;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.form-container input[type="submit"] {
+  background-color: #ffe082;
+  color: #333;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #ffd54f;
+}
+
+/* Μηνύματα */
+.success-message {
+  color: green;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+#social {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
